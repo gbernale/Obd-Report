@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "510706233169",
+    "firebase_url": "https://obd-report.firebaseio.com",
+    "project_id": "obd-report",
+    "storage_bucket": "obd-report.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510706233169:android:b79e7c9955472921",
+        "android_client_info": {
+          "package_name": "com.bernal.gilberto.obd_report"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510706233169-5v3dofc02ffcqj2fibrq51ifbvfb6vch.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bernal.gilberto.obd_report",
+            "certificate_hash": "6c4905c7aa0da927afb450373b2a44166499415e"
+          }
+        },
+        {
+          "client_id": "510706233169-le9cotrr5s26fr2vgrv0utik5j3rjddd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN4x-RFrhjpUg0UNptbxxskxhSzmOifFw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510706233169-le9cotrr5s26fr2vgrv0utik5j3rjddd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
