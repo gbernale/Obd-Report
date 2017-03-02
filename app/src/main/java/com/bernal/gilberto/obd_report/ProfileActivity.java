@@ -78,13 +78,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.add_profile:
-                callFragmentProfile();
+                callFragmenSyncObd();
                 return true;
             case R.id.add_insurance:
-                callFragmentProfile();
+                callFragmenSyncObd();
                 return true;
             case R.id.add_invest:
-                callFragmentProfile();
+                callFragmenSyncObd();
                 return true;
             case R.id.logout:
                 firebaseAuth.signOut();
@@ -108,12 +108,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         loadUserdata(user);
     }
 
-    private void callFragmentProfile()
+    private void callFragmenSyncObd()
     {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        ProfileFragment profileFragment = new ProfileFragment();
-        transaction.replace(R.id.fragment_container,profileFragment,"Customer Profile");
+        SyncObd syncobdFragment = new SyncObd();
+        transaction.replace(R.id.fragment_container,syncobdFragment,"Customer Profile");
         transaction.commit();
 
 
