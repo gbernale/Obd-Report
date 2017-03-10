@@ -33,15 +33,7 @@
             android:id="@+id/tv2"
             />
 
-        <TextView
-            android:text=" Use the menu to Create your profile, add your Insurance and Investment information"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/tv3"
-            />
-
-        <RelativeLayout
+         <RelativeLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="480dp"

@@ -46,8 +46,7 @@ public class ProfileFragment extends Fragment {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        TextView tv3 = (TextView) getActivity().findViewById(R.id.tv3);
-        tv3.setVisibility(View.GONE);
+
         buttonLogout = (Button) view.findViewById(R.id.buttonLogout);
         buttonSaveData = (Button) view.findViewById(R.id.buttonSaveData);
 

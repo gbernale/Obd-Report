@@ -16,12 +16,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 import java.util.UUID;
 
+import static android.R.attr.id;
+import static com.bernal.gilberto.obd_report.R.id.buttonLogout;
 import static com.google.android.gms.internal.zzt.TAG;
 
 
@@ -33,34 +38,27 @@ public class SyncObd extends Fragment {
     View view;
     ArrayList deviceStrs = new ArrayList();
     ArrayList devices = new ArrayList();
+    private String btList;
+    private  Button buttonLogout;
     public  String dvAddress;
     BluetoothSocket socket = null;
     private     UUID uuid;
+    private    TextView tv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_sync_obd, container, false);
-
-
-        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        tv = (TextView) view.findViewById(R.id.tv);
+        buttonLogout = (Button) view.findViewById(R.id.buttonLogout);
+       /* BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null) {
             // Device does not support Bluetooth
         }
         if (!mBluetoothAdapter.isEnabled()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-        }
-
-       /* Set<BluetoothDevice> pairedDevices = mBluetoothAdapter.getBondedDevices();
-
-        if (pairedDevices.size() > 0) {
-            // There are paired devices. Get the name and address of each paired device.
-            for (BluetoothDevice device : pairedDevices) {
-                String deviceName = device.getName();
-                String deviceHardwareAddress = device.getAddress(); // MAC address
-            }
         }  */
 
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -71,6 +69,8 @@ public class SyncObd extends Fragment {
             {
                 deviceStrs.add(device.getName() + "\n" + device.getAddress());
                 devices.add(device.getAddress());
+                btList= (device.getName() + " " + device.getAddress());
+                tv.append(btList);
             }
         }
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
