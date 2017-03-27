@@ -38,12 +38,18 @@ public class SyncObd extends Fragment {
     View view;
     ArrayList deviceStrs = new ArrayList();
     ArrayList devices = new ArrayList();
+    //  from other app
+    ListView listViewPaired;
+    ListView listViewDetected;
+    ArrayList<BluetoothDevice> listPairedBtd;
+    ArrayList<String> arrayListpaired;
+    ArrayAdapter<String> adapter, detectedAdapter;
     private String btList;
-    private  Button buttonLogout;
-    public  String dvAddress;
+    private Button buttonLogout;
+    public String dvAddress;
     BluetoothSocket socket = null;
-    private     UUID uuid;
-    private    TextView tv;
+    private UUID uuid;
+    private TextView tv;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,38 +58,39 @@ public class SyncObd extends Fragment {
         view = inflater.inflate(R.layout.fragment_sync_obd, container, false);
         tv = (TextView) view.findViewById(R.id.tv);
         buttonLogout = (Button) view.findViewById(R.id.buttonLogout);
-       /* BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if (mBluetoothAdapter == null) {
-            // Device does not support Bluetooth
-        }
-        if (!mBluetoothAdapter.isEnabled()) {
-            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-        }  */
+        arrayListpaired = new ArrayList<String>();
+        listPairedBtd = new ArrayList<BluetoothDevice>();
+        listViewDetected = (ListView) view.findViewById(R.id.listViewDetected);
+        listViewPaired = (ListView) view.findViewById(R.id.listViewPaired);
+        listViewDetected.setAdapter(detectedAdapter);
+        detectedAdapter.notifyDataSetChanged();
+        listViewPaired.setAdapter(adapter);
+
 
         BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-        Set <BluetoothDevice> pairedDevices = btAdapter.getBondedDevices();
-        if (pairedDevices.size() > 0)
-        {
-            for (BluetoothDevice device : pairedDevices)
-            {
+        Set<BluetoothDevice> pairedDevices = btAdapter.getBondedDevices();
+        if (pairedDevices.size() > 0) {
+            for (BluetoothDevice device : pairedDevices) {
                 deviceStrs.add(device.getName() + "\n" + device.getAddress());
                 devices.add(device.getAddress());
-                btList= (device.getName() + " " + device.getAddress());
-                tv.append(btList);
+                // btList= (device.getName() + " " + device.getAddress());
+                // tv.append(btList);
+                arrayListpaired.add(device.getName() + "\n" + device.getAddress());
+                listPairedBtd.add(device);
+                adapter.notifyDataSetChanged();
             }
+
         }
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
         ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.select_dialog_singlechoice,
                 deviceStrs.toArray(new String[deviceStrs.size()]));
         alertDialog.setSingleChoiceItems(adapter, -1, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which)
-            {
+            public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
                 int position = ((AlertDialog) dialog).getListView().getCheckedItemPosition();
-                 String deviceAddress = devices.get(position).toString();
-                 dvAddress = deviceAddress;
+                String deviceAddress = devices.get(position).toString();
+                dvAddress = deviceAddress;
                 // TODO save deviceAddress
             }
         });
@@ -100,13 +107,12 @@ public class SyncObd extends Fragment {
         uuid = UUID.fromString(id);
         try {
             BluetoothSocket socket = devicex.createInsecureRfcommSocketToServiceRecord(uuid);
-        }
-            catch (IOException e) {
+        } catch (IOException e) {
             Log.e(TAG, "Socket's create() method failed", e);
         }
         try {
-        socket.connect(); }
-        catch (IOException connectException) {
+            socket.connect();
+        } catch (IOException connectException) {
             // Unable to connect; close the socket and return.
             try {
                 socket.close();
@@ -118,6 +124,6 @@ public class SyncObd extends Fragment {
 
         return inflater.inflate(R.layout.fragment_sync_obd, container, false);
     }
-
-
 }
+
+

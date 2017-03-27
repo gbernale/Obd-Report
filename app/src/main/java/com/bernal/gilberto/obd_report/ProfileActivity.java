@@ -72,13 +72,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.add_profile:
-                callFragmenSyncObd();
+                callFragmentPedido();
                 return true;
             case R.id.add_insurance:
-                callFragmenSyncObd();
+                callFragmentPedido();
                 return true;
             case R.id.add_invest:
-                callFragmenSyncObd();
+                callFragmentPedido();
                 return true;
             case R.id.logout:
                 firebaseAuth.signOut();
@@ -102,37 +102,18 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         loadUserdata(user);
     }
 
-    private void callFragmenSyncObd()
+    private void callFragmentPedido()
     {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        SyncObd syncobdFragment = new SyncObd();
-        transaction.replace(R.id.fragment_container,syncobdFragment,"Customer Profile");
+        PedidoFragment pedidoFragment = new PedidoFragment();
+        transaction.replace(R.id.fragment_container,pedidoFragment,"Customer Order");
         transaction.commit();
 
 
     }
 
-    /*
-    private void callFragmentInsurance()
-    {
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        InsuranceFragment insuranceFragment = new InsuranceFragment();
-        transaction.replace(R.id.fragment_container,insuranceFragment,"Insurance");
-        transaction.commit();
-    }
 
-    private void callFragmentReportData()
-    {
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        ReportDataFragment reportDataFragment = new ReportDataFragment();
-        transaction.replace(R.id.fragment_container,reportDataFragment,"Customer Profile");
-        transaction.commit();
-
-
-    } */
 
     private void loadUserdata(final FirebaseUser user){
 

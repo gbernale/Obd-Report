@@ -1,0 +1,683 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.bernal.gilberto.obd_report.PedidoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:backgroundTint="#5459fc">
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Product"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Precio "
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Cant."
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="   Total"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6ebaf8"
+            android:background="#70c2fd">
+            <TextView
+                android:id="@+id/tv_prod_tamal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Tamales "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_tamal_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="$7.000"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_tamal_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_tamal_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="0.0   "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#5cb2f9"
+            android:background="#61bbfc">
+            <TextView
+                android:id="@+id/tv_prod_morcilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text=" Morcilla  "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_morcilla_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="$7000"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_morcilla_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_morcilla_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="0.0  "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6ebaf8"
+            android:background="#70c2fd">
+            <TextView
+                android:id="@+id/tv_prod_picada_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Mini Picada  "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_picada_small_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="$7000."
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/et_picada_small_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_picada_small_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="0.0 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+            <TextView
+                android:id="@+id/tv_prod_picada_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Super Picada"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_picada_big_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="$7.000 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_picada_big_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_picada_big_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text=" 0.0 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#6ebaf8"
+            android:background="#70c2fd">
+            <TextView
+                android:id="@+id/tv_prod_sancocho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Sancocho  "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_sancocho_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="$7.000 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_sancocho_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_sancocho_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text=" 0.0 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+            <TextView
+                android:id="@+id/tv_prod_huesitos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="Huesitos Pork  "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tv_huesitos_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="$7.000 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_huesitos_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_huesitos_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text=" 0.0 "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+            <TextView
+                android:id="@+id/tv_propertylistitem99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:text="   "
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+            <TextView
+                android:id="@+id/tv_propertylistitem98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/valuecellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:gravity="center"
+                android:text="Datos para confirmacion de pedido:"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa"
+            >
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:text="Nombre Completo:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_Nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="34px"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa"
+            >
+            <TextView
+                android:id="@+id/Direccion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:text="Direccion-1:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_Direccion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#2f9ffa"
+                android:background="#41adfa"
+                >
+
+                <TextView
+                    android:id="@+id/Direccion2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/cellborder"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:paddingTop="6dp"
+                    android:text="Direccion-2:"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_Direccion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingStart="1dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+                </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+
+            <TextView
+                android:id="@+id/Telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:text="Telefono:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_Telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="3dp"
+                android:paddingTop="6dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:width="4px"
+                android:textStyle="bold" />
+            </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+            <TextView
+                android:id="@+id/Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:text="Email Address:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:width="10px"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+
+            <TextView
+                android:id="@+id/Fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:text="Fecha Entrega:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_Fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:width="20px"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+    <Button android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar Pedido"
+        android:onClick="onClickAdd"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="143dp" />
+</LinearLayout>
