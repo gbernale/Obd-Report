@@ -7,30 +7,31 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TableLayout
+        android:stretchColumns="*"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
+            android:background="#fffffc"
             android:backgroundTint="#5459fc">
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="Product"
+                android:text="Productos .. "
                 android:textColor="#ffffff"
                 android:textSize="14sp"
                 android:textStyle="bold" />
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/cellborder"
@@ -77,9 +78,9 @@
             android:background="#70c2fd">
             <TextView
                 android:id="@+id/tv_prod_tamal"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -89,14 +90,14 @@
                 android:textSize="14sp" />
             <TextView
                 android:id="@+id/tv_tamal_precio"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="$7.000"
+                android:text="7.000"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -136,9 +137,9 @@
             android:background="#61bbfc">
             <TextView
                 android:id="@+id/tv_prod_morcilla"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -148,14 +149,14 @@
                 android:textSize="14sp" />
             <TextView
                 android:id="@+id/tv_morcilla_precio"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="$7000"
+                android:text="7.000"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -195,9 +196,9 @@
             android:background="#70c2fd">
             <TextView
                 android:id="@+id/tv_prod_picada_small"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -207,14 +208,14 @@
                 android:textSize="14sp" />
             <TextView
                 android:id="@+id/tv_picada_small_precio"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="$7000."
+                android:text="7.000"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
             <EditText
@@ -252,9 +253,9 @@
             android:background="#41adfa">
             <TextView
                 android:id="@+id/tv_prod_picada_big"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -264,14 +265,14 @@
                 android:textSize="14sp" />
             <TextView
                 android:id="@+id/tv_picada_big_precio"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="$7.000 "
+                android:text="7.000"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -310,9 +311,9 @@
             android:background="#70c2fd">
             <TextView
                 android:id="@+id/tv_prod_sancocho"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -321,15 +322,15 @@
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
             <TextView
-                android:id="@+id/tv_sancocho_price"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_sancocho_precio"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="$7.000 "
+                android:text="7.000"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -368,9 +369,9 @@
             android:background="#41adfa">
             <TextView
                 android:id="@+id/tv_prod_huesitos"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -379,15 +380,15 @@
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
             <TextView
-                android:id="@+id/tv_huesitos_price"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_huesitos_precio"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/valuecellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
                 android:paddingTop="6dp"
-                android:text="$7.000 "
+                android:text="7.000"
                 android:textColor="#ffffff"
                 android:textSize="14sp" />
 
@@ -464,8 +465,8 @@
             android:background="#41adfa"
             >
             <TextView
-                android:id="@+id/nombre"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_nombre"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/cellborder"
@@ -473,15 +474,15 @@
                 android:paddingLeft="1dp"
                 android:paddingRight="1dp"
                 android:paddingTop="6dp"
-                android:text="Nombre Completo:"
+                android:text="Nombre :"
                 android:textColor="#ffffff"
                 android:textSize="14sp"
                 android:textStyle="bold" />
             <EditText
-                android:id="@+id/et_Nombre"
-                android:layout_width="wrap_content"
+                android:id="@+id/et_nombre"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="1dp"
@@ -489,7 +490,7 @@
                 android:paddingTop="6dp"
                 android:textColor="#ffffff"
                 android:textSize="14sp"
-                android:width="34px"
+                android:width="4px"
                 android:textStyle="bold" />
         </TableRow>
         <TableRow
@@ -499,8 +500,8 @@
             android:background="#41adfa"
             >
             <TextView
-                android:id="@+id/Direccion1"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_direccion1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/cellborder"
@@ -514,10 +515,10 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_Direccion1"
-                android:layout_width="wrap_content"
+                android:id="@+id/et_direccion1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="1dp"
@@ -537,8 +538,8 @@
                 >
 
                 <TextView
-                    android:id="@+id/Direccion2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_direccion2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/cellborder"
@@ -551,10 +552,10 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
             <EditText
-                android:id="@+id/et_Direccion2"
-                android:layout_width="wrap_content"
+                android:id="@+id/et_direccion2"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="1dp"
@@ -572,8 +573,8 @@
             android:background="#41adfa">
 
             <TextView
-                android:id="@+id/Telefono"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_telefono"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/cellborder"
@@ -586,10 +587,10 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
             <EditText
-                android:id="@+id/et_Telefono"
-                android:layout_width="wrap_content"
+                android:id="@+id/et_telefono"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="3dp"
@@ -605,8 +606,8 @@
             android:backgroundTint="#2f9ffa"
             android:background="#41adfa">
             <TextView
-                android:id="@+id/Email"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_email"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/cellborder"
@@ -620,16 +621,16 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/et_Email"
-                android:layout_width="wrap_content"
+                android:id="@+id/et_email"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="1dp"
                 android:paddingRight="1dp"
                 android:paddingTop="6dp"
-                android:width="10px"
+                android:width="4px"
                 android:textColor="#ffffff"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -642,8 +643,8 @@
             android:background="#41adfa">
 
             <TextView
-                android:id="@+id/Fecha"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_fecha"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/cellborder"
@@ -656,10 +657,46 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
             <EditText
-                android:id="@+id/et_Fecha"
-                android:layout_width="wrap_content"
+                android:id="@+id/et_fecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:width="4px"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+
+            <TextView
+                android:id="@+id/tv_notas"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:text="Notas:"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_notas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:background="@drawable/cellborder"
                 android:paddingBottom="6dp"
                 android:paddingLeft="1dp"
@@ -670,14 +707,42 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2f9ffa"
+            android:background="#41adfa">
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar Pedido"
+            android:onClick="onClickAdd"
+            android:layout_weight="1"
+            android:background="@drawable/cellborder"
+            android:paddingBottom="6dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="6dp"
+            android:width="5px"
+            android:id="@+id/buttonEnviar"
+             />
+            <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:onClick="onClickAdd"
+                android:layout_weight="1"
+                android:background="@drawable/cellborder"
+                android:paddingBottom="6dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="6dp"
+                android:width="20px"
+                android:textColor="#ffffff"
+                android:id="@+id/buttonCancelar"
+                />
+        </TableRow>
+
+
     </TableLayout>
-    <Button android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enviar Pedido"
-        android:onClick="onClickAdd"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="143dp" />
+
+
 </LinearLayout>
