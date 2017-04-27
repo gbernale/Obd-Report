@@ -8,16 +8,16 @@ public class ProductData {
     public String PrdNombre;
     public int PrdPrecio;
     public int PrdCantidad;
-    public int PrdTotal;
+    public int PrdUnidad;
     public String PrdPhoto;
 
     public ProductData(){};
 
-    public ProductData(String PrdNombre, int PrdPrecio,int PrdCantidad, int PrdTotal, String PrdPhoto) {
+    public ProductData(String PrdNombre, int PrdPrecio,int PrdCantidad, int PrdUnidad, String PrdPhoto) {
         this.PrdNombre = PrdNombre;
         this.PrdPrecio = PrdPrecio;
         this.PrdCantidad = PrdCantidad;
-        this.PrdTotal = PrdTotal;
+        this.PrdUnidad = PrdUnidad;
         this.PrdPhoto = PrdPhoto;
     }
 
@@ -28,5 +28,5 @@ public class ProductData {
     public int getPrdPrecio(){  return PrdPrecio;}
     public int getPrdCantidad(){return PrdCantidad;}
     public String getPrdPhoto(){return PrdPhoto;}
-    public int getPrdTotal(){return PrdTotal;}
+    public int getPrdTotal(){return PrdUnidad;}
 }

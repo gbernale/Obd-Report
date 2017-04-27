@@ -3,6 +3,7 @@ package com.bernal.gilberto.obd_report;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import static android.R.id.edit;
 
 
 public class PedidoFragment extends Fragment {
@@ -31,13 +35,18 @@ public class PedidoFragment extends Fragment {
     private EditText et_nombre,et_direccion1,et_direccion2,et_telefono,et_email,et_fecha,et_notas;
     private View view;
 
-    String tamal_cantidad,morcilla_cantidad,picada_small_cantidad;
-    String picada_big_cantidad,sancocho_cantidad,huesitos_cantidad;
-    String nombre,direccion1,direccion2,telefono,email,fecha,et_comments;
+
+    String sancocho_cantidad,huesitos_cantidad;
+    String nombre,direccion1,direccion2,telefono,email,fecha,notas;
+    String prod_tamal, prod_morcilla,prod_picada_small,prod_picada_big,prod_sancocho,prod_huesitos;
+    int tamal_cantidad,morcilla_cantidad,picada_small_cantidad, picada_big_cantidad;
+    int tamal_precio, morcilla_precio, picada_small_precio,picada_big_precio, sancocho_precio,huesitos_precio;
 
     private FirebaseAuth firebaseAuth;
-    private Button buttonCancelar;
+    private Button buttonCancelar, buttonEnviar;
     private DatabaseReference databaseReference;
+    ProductData[] products;
+
 
 
 /*
@@ -96,20 +105,44 @@ public class PedidoFragment extends Fragment {
         et_fecha = (EditText) view.findViewById(R.id.et_fecha);
         et_notas = (EditText) view.findViewById(R.id.et_notas);
         buttonCancelar = (Button) view.findViewById(R.id.buttonCancelar);
+        buttonEnviar = (Button) view.findViewById(R.id.buttonEnviar);
+        buttonEnviar.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String stamalcantidad =et_tamal_cantidad.getText().toString();
+                tamal_cantidad=Integer.parseInt(stamalcantidad);
+                String smorcillacantidad =et_morcilla_cantidad.getText().toString();
+                morcilla_cantidad=Integer.parseInt(smorcillacantidad);
+                String spicadasmallcantidad =et_picada_small_cantidad.getText().toString();
+                picada_small_cantidad=Integer.parseInt(spicadasmallcantidad);
+                String spicadabigcantidad =et_picada_big_cantidad.getText().toString();
+                picada_big_cantidad=Integer.parseInt(spicadabigcantidad);
+                sancocho_cantidad= et_sancocho_cantidad.getText().toString().trim();
+                huesitos_cantidad= et_huesitos_cantidad.getText().toString().trim();
+                nombre= et_nombre.getText().toString().trim();
+                direccion1= et_direccion1.getText().toString().trim();
+                direccion2= et_direccion2.getText().toString().trim();
+                telefono= et_telefono.getText().toString().trim();
+                email= et_email.getText().toString().trim();
+                notas= et_notas.getText().toString().trim();
+                fecha= et_fecha.getText().toString().trim();
+/*
+                products.add(prod_tamal,tamal_precio,tamal_cantidad,tamal_total,photo);
+                products.add(prod_morcilla,morcilla_precio,morcilla_cantidad,morcilla_total);
+                products.add(prod_picada_small,picada_small_cantidad,picada_small_total,photo);
+                products.add(prod_picada_big,picada_big_cantidad,picada_big_total,photo);
+                products.add(prod_sancocho,sancocho_cantidad,sancocho_total,photo);
+                products.add(prod_huesitos,huesitos_cantidad,huesitos_total,photo);
 
 
-        tamal_cantidad = et_tamal_cantidad.getText().toString().trim();
-        morcilla_cantidad= et_morcilla_cantidad.getText().toString().trim();
-        picada_small_cantidad= et_picada_small_cantidad.getText().toString().trim();
-        picada_big_cantidad= et_picada_big_cantidad.getText().toString().trim();
-        sancocho_cantidad= et_sancocho_cantidad.getText().toString().trim();
-        huesitos_cantidad= et_huesitos_cantidad.getText().toString().trim();
-        nombre= et_nombre.getText().toString().trim();
-        direccion1= et_direccion1.getText().toString().trim();
-        direccion2= et_direccion2.getText().toString().trim();
-        telefono= et_telefono.getText().toString().trim();
-        email= et_email.getText().toString().trim();
-        fecha= et_fecha.getText().toString().trim();
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                OrderData orderData = new OrderData(ProductName,ProductCantidad,ProductPrecio,OrderTotal,OrderFecha,OrderComments, OrderCustomer,OrderAddress1,OrderAddress2,String OrderTelephone,OrderStatus,orderStatusFecha;);
+*/
+            }
+        });
+
+
+
 
         return inflater.inflate(R.layout.fragment_pedido, container, false);
     }

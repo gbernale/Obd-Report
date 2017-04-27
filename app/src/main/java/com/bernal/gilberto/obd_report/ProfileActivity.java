@@ -72,7 +72,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.add_profile:
-                callFragmentPedido();
+                callFragmentAddProduct();
                 return true;
             case R.id.add_insurance:
                 callFragmentPedido();
@@ -108,6 +108,17 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         FragmentTransaction transaction = manager.beginTransaction();
         PedidoFragment pedidoFragment = new PedidoFragment();
         transaction.replace(R.id.fragment_container,pedidoFragment,"Customer Order");
+        transaction.commit();
+
+
+    }
+
+    private void callFragmentAddProduct()
+    {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        AddProductFragment addproductFragment = new AddProductFragment();
+        transaction.replace(R.id.fragment_container,addproductFragment,"Add Products");
         transaction.commit();
 
 
