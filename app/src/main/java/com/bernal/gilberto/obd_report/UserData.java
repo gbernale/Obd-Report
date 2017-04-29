@@ -7,7 +7,7 @@ package com.bernal.gilberto.obd_report;
 public class UserData {
     public   String username;
     public   String useraddress;
-    public   String userPhone;
+    public   String userRole;
 
     public UserData() {
     }
@@ -16,7 +16,7 @@ public class UserData {
     public UserData(String username, String useraddress, String userPhone) {
         this.username = username;
         this.useraddress = useraddress;
-        this.userPhone = userPhone;
+        this.userRole = userPhone;
     }
 
     public String getUsername() {
@@ -28,7 +28,7 @@ public class UserData {
     }
 
     public  String getUserPhone(){
-        return userPhone;
+        return userRole;
     }
 
 }

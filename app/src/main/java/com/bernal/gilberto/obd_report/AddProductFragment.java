@@ -27,7 +27,7 @@ public class AddProductFragment extends Fragment {
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
-    private EditText et_productname,et_productprice,et_productcantidad,et_productunidad, et_productphoto;
+    private EditText et_productname, et_productprice, et_productcantidad, et_productunidad, et_productphoto;
     private TextView tv_products;
     private View view;
     private Button buttonSaveData, buttonLogout;
@@ -39,10 +39,10 @@ public class AddProductFragment extends Fragment {
         // Inflate the layout for this fragment
 
         view = inflater.inflate(R.layout.fragment_add_product, container, false);
-        firebaseAuth= FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference();
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+        //FirebaseUser user = firebaseAuth.getCurrentUser();
 
         buttonLogout = (Button) view.findViewById(R.id.buttonLogout);
         buttonSaveData = (Button) view.findViewById(R.id.buttonSaveData);
@@ -62,15 +62,17 @@ public class AddProductFragment extends Fragment {
 
                 String pname = et_productname.getText().toString().trim();
                 String sprice = et_productprice.getText().toString().trim();
-                int pprice=Integer.parseInt(sprice);
+                int pprice = Integer.parseInt(sprice);
                 String sunidad = et_productunidad.getText().toString().trim();
                 int punidad = Integer.parseInt(sunidad);
                 String scantidad = et_productcantidad.getText().toString().trim();
                 int pcantidad = Integer.parseInt(scantidad);
                 String pphoto = et_productphoto.getText().toString().trim();
-                ProductData pdata = new ProductData(pname,pprice,pcantidad,punidad, pphoto);
+                ProductData pdata = new ProductData(pname, pprice, pcantidad, punidad, pphoto);
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                databaseReference.child("ProductData").child(user.getUid()).setValue(pdata);
+                DatabaseReference prd = databaseReference.child("Products").child(user.getUid()).push();
+                prd.setValue(pdata);
+                //databaseReference.child("Products").child(user.getUid()).setValue(pdata);
                 Toast.makeText(getContext(), "Product Data saved  .....", Toast.LENGTH_LONG).show();
                 //loadUserdata(user);
             }

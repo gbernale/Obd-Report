@@ -4,29 +4,43 @@ package com.bernal.gilberto.obd_report;
  * Created by Registered User on 4/18/2017.
  */
 
+
 public class ProductData {
-    public String PrdNombre;
-    public int PrdPrecio;
-    public int PrdCantidad;
-    public int PrdUnidad;
-    public String PrdPhoto;
 
-    public ProductData(){};
 
-    public ProductData(String PrdNombre, int PrdPrecio,int PrdCantidad, int PrdUnidad, String PrdPhoto) {
-        this.PrdNombre = PrdNombre;
-        this.PrdPrecio = PrdPrecio;
-        this.PrdCantidad = PrdCantidad;
-        this.PrdUnidad = PrdUnidad;
-        this.PrdPhoto = PrdPhoto;
+    public String prdNombre;
+    public int prdPrecio;
+    public int prdCantidad;
+    public int prdUnidad;
+    public String prdPhoto;
+
+    public ProductData(String PrdNombre, int PrdPrecio, int PrdCantidad, int PrdUnidad, String PrdPhoto) {
+        this.prdNombre = PrdNombre;
+        this.prdPrecio = PrdPrecio;
+        this.prdCantidad = PrdCantidad;
+        this.prdUnidad = PrdUnidad;
+        this.prdPhoto = PrdPhoto;
     }
 
     public String getPrdNombre() {
-        return PrdNombre;
+        return prdNombre;
     }
 
-    public int getPrdPrecio(){  return PrdPrecio;}
-    public int getPrdCantidad(){return PrdCantidad;}
-    public String getPrdPhoto(){return PrdPhoto;}
-    public int getPrdTotal(){return PrdUnidad;}
+    public int getPrdPrecio() {
+        return prdPrecio;
+    }
+
+    public int getPrdCantidad() {
+        return prdCantidad;
+    }
+
+    public int getPrdUnidad() {
+        return prdUnidad;
+    }
+
+    public String getPrdPhoto() {
+        return prdPhoto;
+    }
+
+
 }
